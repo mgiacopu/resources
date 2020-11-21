@@ -1,96 +1,95 @@
-const knex = require('knex')({ client: "pg" });
-const faker = require('faker');
+const knex = require("knex")({ client: "pg" });
+const parse = require("csv-parse");
 
-const fs = require('fs');
+const fs = require("fs");
+const path = require("path");
 
-const allCountries = require('./countries');
-const allCapitals = require('./capitals');
-
-const countryCount = 50;
-const file = []
+const file = [];
 
 function a(schema) {
   file.push(`${schema.toString()};`);
 }
 
-a(knex.schema.dropTableIfExists('Match'));
-a(knex.schema.dropTableIfExists('Stadium'));
-a(knex.schema.dropTableIfExists('Nationality'));
+a(knex.schema.dropTableIfExists("Match"));
+a(knex.schema.dropTableIfExists("Stadium"));
+a(knex.schema.dropTableIfExists("Nationality"));
 
-a(knex.schema.createTable('Nationality', (table) => {
-  table.text("country").primary();
-  table.text("continent").notNullable();
-  table.string("group", 1).notNullable();
-}));
-
-a(knex.schema.createTable('Stadium', (table) => {
-  table.text("name").primary();
-  table.text("city").notNullable();
-  table.text("country").notNullable().references("country").inTable("Nationality");
-  table.integer("capacity").notNullable();
-}));
-
-a(knex.schema.createTable('Match', (table) => {
-  table.text("stadium").notNullable();
-  table.date("date").notNullable();
-  table.time("time").notNullable();
-  table.text("home").notNullable().references("country").inTable("Nationality");
-  table.text("guest").notNullable().references("country").inTable("Nationality");
-  table.primary(["stadium", "date", "time"]);
-}));
-
-const nationalities = [];
-const countries = faker.random.arrayElements(allCountries, countryCount);
-for (let { country, continent } of countries) {
-  nationalities.push({
-    country,
-    continent,
-    group: faker.random.arrayElement(["A", "B", "C", "D"])
+a(
+  knex.schema.createTable("Nationality", (table) => {
+    table.text("country").primary();
+    table.text("continent").notNullable();
+    table.string("group", 1).notNullable();
   })
-}
+);
 
-a(knex('Nationality').insert(nationalities));
+a(
+  knex.schema.createTable("Stadium", (table) => {
+    table.text("name").primary();
+    table.text("city").notNullable();
+    table
+      .text("country")
+      .notNullable()
+      .references("country")
+      .inTable("Nationality");
+    table.integer("capacity").notNullable();
+  })
+);
 
-const stadiums = [];
-for (let { country } of nationalities) {
-  const { city } = allCapitals.find((capital) => capital.country === country);
+a(
+  knex.schema.createTable("Match", (table) => {
+    table.text("stadium").notNullable();
+    table.date("date").notNullable();
+    table.time("time").notNullable();
+    table
+      .text("home")
+      .notNullable()
+      .references("country")
+      .inTable("Nationality");
+    table
+      .text("guest")
+      .notNullable()
+      .references("country")
+      .inTable("Nationality");
+    table.primary(["stadium", "date", "time"]);
+  })
+);
 
-  let name = faker.name.firstName();
-  while (stadiums.some(s => s.name === name)) {
-    name = faker.name.firstName();
+async function main() {
+  function pparse(file) {
+    return new Promise((resolve) => {
+      parse(fs.readFileSync(file), (err, out) => {
+        const fields = out[0];
+        const data = out.splice(1);
+        const values = [];
+        for (const record of data) {
+          const value = {};
+          for (let i = 0; i < fields.length; i++) {
+            value[fields[i]] = record[i];
+          }
+          values.push(value);
+        }
+        resolve(values);
+      });
+    });
   }
 
-  stadiums.push({
-    name,
-    city,
-    country,
-    capacity: faker.random.number({ min: 25, max: 80 }) * 1e3
-  })
+  const nationality = await pparse("nationality.csv");
+  a(knex("Nationality").insert(nationality));
+
+  const stadium = await pparse("stadium.csv");
+  a(knex("Stadium").insert(stadium));
+
+  const match = await pparse("match.csv");
+  a(knex("Match").insert(match));
+
+  if (!fs.existsSync("out")) {
+    fs.mkdirSync("out");
+  }
+
+  await fs.promises.writeFile(
+    path.join("out", "create_db.sql"),
+    file.join("\n\n")
+  );
 }
 
-a(knex('Stadium').insert(stadiums));
-
-const matches = [];
-for (let i = 0; i < 200; i++) {
-  let { country, name } = faker.random.arrayElement(stadiums);
-  let guest = faker.random.arrayElement(countries);
-  while (guest.country === country) guest = faker.random.arrayElement(countries);
-
-  const date = faker.random.boolean() ? faker.date.recent(200) : faker.date.soon(200);
-
-  matches.push({
-    stadium: name,
-    home: country,
-    guest: guest.country,
-    date: `${date.getUTCFullYear()}-${date.getUTCMonth() + 1}-${date.getUTCDay() + 1}`,
-    time: `${date.getUTCHours()}:${date.getUTCMinutes()}:${date.getUTCSeconds()}`
-  })
-}
-
-a(knex('Match').insert(matches));
-
-if (!fs.existsSync("out")) {
-  fs.mkdirSync("out");
-}
-
-fs.writeFileSync("out/create_db.sql", file.join("\n\n"));
+main();

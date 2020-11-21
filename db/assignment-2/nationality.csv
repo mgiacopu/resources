@@ -1,0 +1,168 @@
+country,continent,group
+United Kingdom,Europe,A
+Belarus,Europe,D
+Indonesia,Asia,B
+Ireland,Europe,C
+Estonia,Europe,D
+Greenland,North America,C
+Malta,Europe,C
+Norway,Europe,B
+Lithuania,Europe,B
+Italy,Europe,A
+Brazil,South America,B
+Croatia,Europe,D
+Bosnia and Herzegovina,Europe,B
+Cyprus,Europe,C
+Kosovo,Europe,B
+Hungary,Europe,B
+Spain,Europe,D
+Moldova,Europe,B
+Romania,Europe,D
+Kenya,Africa,B
+Georgia,Europe,C
+Australia,Oceania,A
+Philippines,Asia,A
+Canada,North America,D
+United States of America,North America,B
+Egypt,Africa,C
+Serbia,Europe,C
+Faroe Islands,Europe,D
+Ukraine,Europe,C
+Czech Republic,Europe,D
+Slovakia,Europe,A
+North Macedonia,Europe,C
+Israel,Asia,B
+Portugal,Europe,D
+Costa Rica,North America,C
+Bulgaria,Europe,D
+Azerbaijan,Europe,B
+Venezuela,South America,A
+Greece,Europe,D
+Germany,Europe,D
+Republic of Abkhazia,Europe,A
+Sweden,Europe,C
+Chile,South America,C
+Cape Verde,Africa,C
+Poland,Europe,B
+Turkey,Europe,B
+France,Europe,D
+People's Republic of China,Asia,A
+Iceland,Europe,C
+Slovenia,Europe,D
+Suriname,South America,A
+Japan,Asia,A
+Netherlands,Europe,B
+Singapore,Asia,D
+Mongolia,Asia,C
+Finland,Europe,C
+Russia,Europe,D
+Armenia,Europe,B
+Paraguay,South America,D
+Uruguay,South America,C
+Kazakhstan,Europe,D
+Peru,South America,C
+Colombia,South America,D
+Tunisia,Africa,C
+Liberia,Africa,B
+Nicaragua,North America,C
+Honduras,North America,D
+Saudi Arabia,Asia,A
+British Virgin Islands,North America,A
+Pakistan,Asia,D
+Afghanistan,Asia,C
+Belgium,Europe,B
+Switzerland,Europe,A
+Liechtenstein,Europe,D
+Benin,Africa,D
+Austria,Europe,A
+Antigua and Barbuda,North America,C
+Luxembourg,Europe,C
+Curaçao,South America,C
+Ghana,Africa,D
+Nepal,Asia,A
+San Marino,Europe,C
+South Africa,Africa,B
+Montenegro,Europe,A
+Thailand,Asia,A
+Bangladesh,Asia,B
+Saint Lucia,North America,C
+Iran,Asia,B
+São Tomé and Príncipe,Africa,B
+Mexico,North America,C
+Albania,Europe,D
+El Salvador,North America,C
+Iraq,Asia,A
+Lebanon,Asia,B
+Zimbabwe,Africa,A
+Uganda,Africa,C
+Ecuador,South America,C
+Latvia,Europe,C
+New Zealand,Oceania,B
+Taiwan,Asia,A
+Guernsey,Europe,B
+Denmark,Europe,D
+Syria,Asia,B
+United Arab Emirates,Asia,D
+Vietnam,Asia,A
+South Korea,Asia,D
+Panama,South America,D
+Djibouti,Africa,D
+Libya,Africa,A
+Morocco,Africa,C
+Argentina,South America,D
+India,Asia,B
+Dominican Republic,North America,D
+Myanmar,Asia,D
+Qatar,Asia,B
+Solomon Islands,Oceania,C
+Angola,Africa,A
+State of Palestine,Asia,D
+Guatemala,North America,C
+Algeria,Africa,D
+Botswana,Africa,C
+Democratic Republic of the Congo,Africa,B
+Mauritius,Africa,A
+Trinidad and Tobago,North America,B
+Tanzania,Africa,B
+The Gambia,Africa,A
+Burkina Faso,Africa,B
+Saint Kitts and Nevis,North America,A
+Uzbekistan,Asia,C
+Papua New Guinea,Oceania,A
+Bahrain,Asia,D
+Gabon,Africa,C
+Guyana,South America,A
+Dominica,North America,C
+Kuwait,Asia,C
+Burundi,Africa,B
+Cameroon,Africa,B
+Fiji,Oceania,A
+Bolivia,South America,A
+Bhutan,Asia,C
+South Sudan,Africa,D
+Ethiopia,Africa,A
+Somalia,Africa,A
+Kyrgyzstan,Asia,C
+Zambia,Africa,D
+Malaysia,Asia,C
+Sri Lanka,Asia,C
+Jordan,Asia,C
+Laos,Asia,B
+Ivory Coast,Africa,A
+Nigeria,Africa,C
+Cuba,North America,C
+Turkmenistan,Asia,C
+Sudan,Africa,B
+Rwanda,Africa,C
+Malawi,Africa,B
+Sierra Leone,Africa,C
+Eritrea,Africa,B
+Mauritania,Africa,B
+Cambodia,Asia,C
+Mali,Africa,C
+Brunei,Asia,C
+Saint Vincent and the Grenadines,North America,A
+Tajikistan,Asia,B
+North Korea,Asia,B
+Grenada,North America,C
+Oman,Asia,C
