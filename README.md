@@ -2,7 +2,7 @@
     <img align="right" src="assets/unitn.png" height="150" />
 </span>
 
-# Unitn resources
+# Unitn Resources
 
 ```
 .
