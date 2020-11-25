@@ -4,4 +4,4 @@ List all pairs of countries (C1, C2) that have ever played one against the other
 
 | C1         | C2         |
 | :--------- | :--------- |
-| *\<empty>* | *\<empty>* |
+| _\<empty>_ | _\<empty>_ |
