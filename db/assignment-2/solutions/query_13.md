@@ -2,7 +2,7 @@
 
 For each stadium, how many matches start in the morning (all times are local time, morning is from 6:00 through 11:59).
 
-*(1506 rows)*
+*(1507 rows)*
 
 | name | count |
 | :--- | :--- |
@@ -197,7 +197,7 @@ For each stadium, how many matches start in the morning (all times are local tim
 | Champion Hill | 3 |
 | Chang Arena | 4 |
 | Changlimithang Stadium | 2 |
-| Chaplin Reserve | 4 |
+| Chaplin Reserve | 5 |
 | Chatsworth Stadium | 2 |
 | Cheriton Road | 1 |
 | Chernomorets Stadium | 3 |
@@ -404,7 +404,7 @@ For each stadium, how many matches start in the morning (all times are local tim
 | Estádio Ilha do Retiro | 1 |
 | Estadio Independencia | 4 |
 | Estádio Independência | 1 |
-| Estadio Independiente MRCI | 2 |
+| Estadio Independiente MRCI | 3 |
 | Estadio Insular | 2 |
 | Estadio IPD de Moyobamba | 1 |
 | Estadio Iván Elías Moreno | 1 |
@@ -572,7 +572,7 @@ For each stadium, how many matches start in the morning (all times are local tim
 | Estadio Torrero | 2 |
 | Estadio Universidad San Marcos | 2 |
 | Estadio Universitario Alberto Chivo Cordova | 4 |
-| Estadio Universitario UES | 4 |
+| Estadio Universitario UES | 5 |
 | Estádio Urbano Caldeira | 2 |
 | Estadio Víctor Agustín Ugarte | 1 |
 | Estádio Vila Olímpica | 1 |
@@ -637,7 +637,7 @@ For each stadium, how many matches start in the morning (all times are local tim
 | Gozo Stadium | 2 |
 | Gradski stadion | 1 |
 | Gradski stadion Kičevo | 2 |
-| Gradski stadion Luke | 1 |
+| Gradski stadion Luke | 2 |
 | Gradski stadion Štip | 1 |
 | Gradski stadion Tetovo | 1 |
 | Gran Canaria Stadium | 4 |
@@ -1095,6 +1095,7 @@ For each stadium, how many matches start in the morning (all times are local tim
 | Shafa Stadium | 1 |
 | Shah Alam Stadium | 2 |
 | Shaheed Salam Stadium | 1 |
+| Shahid Bahonar Stadium | 1 |
 | Shahid Dastgerdi Stadium | 1 |
 | Shahid Shiroudi Stadium | 1 |
 | Shanghai Stadium | 5 |
@@ -1392,7 +1393,7 @@ For each stadium, how many matches start in the morning (all times are local tim
 | Thammasat Stadium | 1 |
 | Thanh Hoa Stadium | 1 |
 | Thani bin Jassim Stadium | 2 |
-| The Avenue Stadium | 1 |
+| The Avenue Stadium | 2 |
 | The Den | 1 |
 | The Gardens Greyhound and Sporting Complex | 1 |
 | The Gnoll | 2 |
