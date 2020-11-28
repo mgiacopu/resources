@@ -2,7 +2,7 @@
 
 Assuming that every match lasts 2 hours, find teams that have conflicts in their scheduled matches (that is, teams that are scheduled to play at two different locations on the same day, or teams whose match overlaps with another one played on the same day).
 
-*(167 rows)*
+*(167 rows)*  
 *(Ordered by country)*
 
 | country                          |
