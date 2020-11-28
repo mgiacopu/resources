@@ -2,7 +2,7 @@
 
 List the cities where at least one team from any of these groups (‘A’,’B’,’C’) played.
 
-*(1658 rows)*
+*(1658 rows)*  
 *(Ordered by city)*
 
 | city |
