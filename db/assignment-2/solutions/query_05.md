@@ -2,7 +2,7 @@
 
 Find countries that schedule some games at a stadium that is not their largest.
 
-*(126 rows)*
+*(126 rows)*  
 _(Ordered by country)_
 
 | country                          |
